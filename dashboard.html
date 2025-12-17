@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SecurityTraining</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🔐 SecurityTraining</h1>
+            <div class="nav-right">
+                <span id="user-name" class="user-name">Usuário</span>
+                <button id="logout-btn" class="btn-logout">Sair</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="user-card">
+                <div class="avatar">👤</div>
+                <h3 id="sidebar-user-name">Usuário</h3>
+                <div class="user-stats">
+                    <div class="stat">
+                        <span class="stat-label">Nível</span>
+                        <span class="stat-value" id="nivel-display">1</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">XP</span>
+                        <span class="stat-value" id="xp-display">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="overview">📊 Visão Geral</a>
+                <a href="#" class="nav-item" data-section="modulos">📚 Módulos</a>
+                <a href="#" class="nav-item" data-section="ranking">🏆 Ranking</a>
+                <a href="#" class="nav-item" data-section="certificados">🎓 Certificados</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section id="overview-section" class="section active">
+                <div class="section-header">
+                    <h2>Bem-vindo ao seu Treinamento!</h2>
+                    <p>Acompanhe seu progresso e complete os módulos de segurança</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-info">
+                            <h4>Pontuação Total</h4>
+                            <p class="stat-number" id="total-points">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <h4>Módulos Completos</h4>
+                            <p class="stat-number" id="modulos-completos">0/5</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-info">
+                            <h4>Taxa de Progresso</h4>
+                            <p class="stat-number" id="taxa-progresso">0%</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💎</div>
+                        <div class="stat-info">
+                            <h4>Moedas Virtuais</h4>
+                            <p class="stat-number" id="moedas-virtuais">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <h3>Seu Progresso Geral</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">0%</span>
+                    </div>
+                </div>
+
+                <div class="modules-preview">
+                    <h3>Próximos Passos</h3>
+                    <div class="modules-grid" id="modules-grid"></div>
+                </div>
+            </section>
+
+            <section id="modulos-section" class="section">
+                <div class="section-header">
+                    <h2>Trilha de Aprendizado</h2>
+                    <p>Complete todos os módulos para obter seu certificado</p>
+                </div>
+                <div class="modules-list" id="modules-list"></div>
+            </section>
+
+            <section id="ranking-section" class="section">
+                <div class="section-header">
+                    <h2>Ranking Global</h2>
+                    <p>Veja como você se compara com outros usuários</p>
+                </div>
+                <div class="ranking-container">
+                    <div class="ranking-filters">
+                        <button class="filter-btn active" data-filter="pontuacao">Pontos</button>
+                        <button class="filter-btn" data-filter="xp">XP</button>
+                        <button class="filter-btn" data-filter="nivel">Nível</button>
+                    </div>
+                    
+                    <div class="ranking-table">
+                        <table id="ranking-table">
+                            <thead>
+                                <tr>
+                                    <th>Posição</th>
+                                    <th>Usuário</th>
+                                    <th>Pontos</th>
+                                    <th>XP</th>
+                                    <th>Nível</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ranking-tbody">
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="certificados-section" class="section">
+                <div class="section-header">
+                    <h2>Meus Certificados</h2>
+                    <p>Certificados de conclusão dos treinamentos</p>
+                </div>
+                <div id="certificados-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/gamification.js"></script>
+    <script src="js/ranking.js"></script> 
+    </body>
+</html>

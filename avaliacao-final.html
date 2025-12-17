@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Final - SecurityTraining</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">
+                <a href="dashboard.html" style="text-decoration: none; color: white;">🔐 SecurityTraining</a>
+            </h1>
+            <div class="nav-right">
+                <span id="user-name" class="user-name">Usuário</span>
+                <button id="logout-btn" class="btn-logout">Sair</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="avaliacao-container">
+        <div class="avaliacao-header">
+            <h2>Avaliação Final</h2>
+            <p>Responda <strong>10 perguntas</strong> abrangendo todos os módulos para obter seu certificado.</p>
+            <div class="avaliacao-info">
+                <span>Nota mínima para aprovação: <strong>70%</strong></span>
+            </div>
+        </div>
+
+        <div class="avaliacao-content">
+            <div class="progress-bar-large">
+                <div class="progress-fill" id="avaliacao-progress" style="width: 0%;"></div>
+            </div>
+            <p class="progress-text" id="avaliacao-counter">...</p>
+            <div id="avaliacao-question-area"></div>
+        </div>
+
+        <div class="avaliacao-footer">
+            <button id="avaliacao-prev" class="btn-secondary" disabled>← Anterior</button>
+            <button id="avaliacao-submit" class="btn-primary">Finalizar Avaliação</button>
+        </div>
+    </div>
+
+    <div id="avaliacao-result-modal" class="modal hidden">
+        <div class="modal-content result-modal">
+            <div id="result-icon"></div>
+            <h2 id="result-title"></h2>
+            <div class="result-stats">
+                <p>Sua nota: <strong id="result-score">0</strong>%</p>
+                <p>Acertos: <strong id="result-correct">0</strong>/10</p>
+            </div>
+            <div id="result-message"></div>
+            <div class="result-buttons">
+                <button id="result-home" class="btn-primary" onclick="window.location.href='dashboard.html'">Voltar ao Dashboard</button>
+                <button id="result-retry" class="btn-secondary" style="display:none;" onclick="location.reload()">Tentar Novamente</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/avaliacao.js"></script>
+    <script src="js/gamification.js"></script>
+</body>
+</html>

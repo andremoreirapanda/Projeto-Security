@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado - SecurityTraining</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Ajuste para garantir que o certificado saia bonito no PDF */
+        #certificate-display {
+            background-color: white; /* Garante fundo branco no print */
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">
+                <a href="dashboard.html" style="text-decoration: none; color: white;">🔐 SecurityTraining</a>
+            </h1>
+            <div class="nav-right">
+                <span id="user-name" class="user-name">Usuário</span>
+                <button id="logout-btn" class="btn-logout">Sair</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="certificado-container">
+        <div class="certificado-actions">
+            <button id="download-pdf" class="btn-primary">📥 Baixar PDF</button>
+            <button id="compartilhar" class="btn-secondary">📤 Compartilhar</button>
+            <a href="dashboard.html" class="btn-secondary">Voltar ao Dashboard</a>
+        </div>
+
+        <div id="certificate-display" class="certificate-box">
+            <div class="certificate">
+                <div class="cert-header">
+                    <h1>CERTIFICADO DE CONCLUSÃO</h1>
+                </div>
+
+                <div class="cert-body">
+                    <p class="cert-text">Certificamos que</p>
+                    <h2 id="cert-name" class="cert-name">Carregando...</h2>
+                    <p class="cert-text">completou com sucesso o treinamento</p>
+                    <h3 class="cert-title">Segurança da Informação e Proteção de Dados</h3>
+                    <p class="cert-text">na plataforma SecurityTraining</p>
+
+                    <div class="cert-info">
+                        <div class="cert-field">
+                            <label>Data de Conclusão:</label>
+                            <p id="cert-date">--/--/----</p>
+                        </div>
+                        <div class="cert-field">
+                            <label>Nota Final:</label>
+                            <p id="cert-grade">--%</p>
+                        </div>
+                        <div class="cert-field">
+                            <label>Código de Autenticidade:</label>
+                            <p id="cert-code">VERIFICANDO...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-footer">
+                    <p>Esse certificado valida a conclusão satisfatória de todos os módulos de treinamento</p>
+                    <p class="cert-seal">✓ Certificado Autenticado</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <script src="js/main.js"></script>
+    <script src="js/certificate.js"></script>
+</body>
+</html>

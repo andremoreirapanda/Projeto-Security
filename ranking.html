@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking - SecurityTraining</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">
+                <a href="dashboard.html" style="text-decoration: none; color: white;">🔐 SecurityTraining</a>
+            </h1>
+            <div class="nav-right">
+                <span id="user-name" class="user-name">Usuário</span>
+                <button id="logout-btn" class="btn-logout">Sair</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="ranking-page-container">
+        <div class="ranking-header">
+            <h2>🏆 Ranking Global</h2>
+            <p>Melhores desempenhos da plataforma</p>
+        </div>
+
+        <div class="ranking-filters">
+            <button class="filter-btn active" data-filter="pontos">Pontos</button>
+            <button class="filter-btn" data-filter="xp">XP</button>
+            <button class="filter-btn" data-filter="nivel">Nível</button>
+        </div>
+
+        <div class="ranking-table">
+            <table id="ranking-table">
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Usuário</th>
+                        <th>Pontos</th>
+                        <th>XP</th>
+                        <th>Nível</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-tbody"></tbody>
+            </table>
+        </div>
+
+        <a href="dashboard.html" class="btn-primary">Voltar ao Dashboard</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/ranking.js"></script>
+</body>
+</html>

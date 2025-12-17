@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - SecurityTraining</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">
+                <a href="dashboard.html" style="text-decoration: none; color: white;">🔐 SecurityTraining</a>
+            </h1>
+            <div class="nav-right">
+                <span id="user-name" class="user-name">Usuário</span>
+                <button id="logout-btn" class="btn-logout">Sair</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h2 id="quiz-title">Quiz do Módulo</h2>
+            <div class="quiz-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="quiz-progress" style="width: 0%;"></div>
+                </div>
+                <span id="quiz-counter">1/3</span>
+            </div>
+        </div>
+
+        <div class="quiz-content">
+            <div id="quiz-question-area"></div>
+        </div>
+
+        <div class="quiz-footer">
+            <button id="quiz-prev" class="btn-secondary" disabled>← Anterior</button>
+            <button id="quiz-next" class="btn-primary">Próximo →</button>
+        </div>
+    </div>
+
+    <div id="quiz-result-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Resultado do Quiz</h2>
+            <div id="quiz-result-info"></div>
+            <button onclick="location.href='modulo.html'" class="btn-primary">Voltar ao Módulo</button>
+        </div>
+    </div>
+
+   <script src="js/main.js"></script>
+   <script src="js/gamification.js"></script>
+   <script src="js/quiz.js"></script>
+   <script src="js/modules.js"></script>
+</body>
+</html>
